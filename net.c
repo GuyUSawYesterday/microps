@@ -104,7 +104,7 @@ net_run(void)
     struct net_device *dev;
 
     infof("startup...");
-    if (platform_run() == 1) {
+    if (platform_run() == -1) {
         errorf("platform_run() failure");
 	return -1;
     }
